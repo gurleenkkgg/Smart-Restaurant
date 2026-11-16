@@ -3,10 +3,12 @@ import { useContext } from "react";
 import { RestaurantProvider, RestaurantContext } from "./context/RestaurantContext";
 import MenuPage from "./pages/MenuPage";
 import CartCheckoutPage from "./pages/CartCheckoutPage";
+import ReservationsPage from "./pages/ReservationsPage";
+import ProfilePage from "./pages/ProfilePage";
 import "./App.css";
 
 function Navigation() {
-  const { cart } = useContext(RestaurantContext);
+  const { cart, currentUser } = useContext(RestaurantContext);
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -14,7 +16,9 @@ function Navigation() {
       <h1>Smart Restaurant</h1>
       <div className="nav-links">
         <Link to="/">Menu</Link>
+        <Link to="/reservations">Reservations & Events</Link>
         <Link to="/cart">Cart ({totalItems})</Link>
+        <Link to="/profile">{currentUser ? currentUser.name : "Account"}</Link>
       </div>
     </nav>
   );
@@ -27,7 +31,9 @@ export default function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<MenuPage />} />
+          <Route path="/reservations" element={<ReservationsPage />} />
           <Route path="/cart" element={<CartCheckoutPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
     </RestaurantProvider>

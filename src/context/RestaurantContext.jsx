@@ -7,8 +7,9 @@ export function RestaurantProvider({ children }) {
   const [menuItems, setMenuItems] = useState(initialMenu);
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState([]);
+  const [reservations, setReservations] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
 
-  // Add item to cart or increase quantity
   const addToCart = (item) => {
     setCart((prevCart) => {
       const existing = prevCart.find((i) => i.id === item.id);
@@ -21,7 +22,6 @@ export function RestaurantProvider({ children }) {
     });
   };
 
-  // Update quantity or remove if 0
   const updateQuantity = (id, amount) => {
     setCart((prevCart) =>
       prevCart
@@ -36,7 +36,6 @@ export function RestaurantProvider({ children }) {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
-  // Submit order
   const placeOrder = (orderDetails) => {
     const newOrder = {
       id: Date.now(),
@@ -51,6 +50,22 @@ export function RestaurantProvider({ children }) {
     return newOrder;
   };
 
+  const addReservation = (bookingDetails) => {
+    const newBooking = {
+      id: Date.now(),
+      status: "Pending",
+      ...bookingDetails,
+    };
+    setReservations((prev) => [newBooking, ...prev]);
+    return newBooking;
+  };
+
+  const cancelReservation = (id) => {
+    setReservations((prev) =>
+      prev.map((res) => (res.id === id ? { ...res, status: "Canceled" } : res))
+    );
+  };
+
   return (
     <RestaurantContext.Provider
       value={{
@@ -63,6 +78,12 @@ export function RestaurantProvider({ children }) {
         orders,
         setOrders,
         placeOrder,
+        reservations,
+        setReservations,
+        addReservation,
+        cancelReservation,
+        currentUser,
+        setCurrentUser,
       }}
     >
       {children}

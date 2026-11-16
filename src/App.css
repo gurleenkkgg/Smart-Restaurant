@@ -205,3 +205,15 @@ body {
   border-radius: 6px;
   font-weight: bold;
 }
+ .checkout-form input[type="date"],
+.checkout-form input[type="time"],
+.checkout-form input[type="number"],
+.checkout-form input[type="email"],
+.checkout-form select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 0.3rem;
+}
