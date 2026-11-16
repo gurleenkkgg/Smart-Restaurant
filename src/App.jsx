@@ -5,6 +5,7 @@ import MenuPage from "./pages/MenuPage";
 import CartCheckoutPage from "./pages/CartCheckoutPage";
 import ReservationsPage from "./pages/ReservationsPage";
 import ProfilePage from "./pages/ProfilePage";
+import AdminDashboard from "./pages/AdminDashboard";
 import AiChatWidget from "./components/AiChatWidget";
 import "./App.css";
 
@@ -36,9 +37,9 @@ export default function App() {
           <Route path="/reservations" element={<ReservationsPage />} />
           <Route path="/cart" element={<CartCheckoutPage />} />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/admin" element={<AdminDashboard/>} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
-      <AiChatWidget />
+        <AiChatWidget />
       </BrowserRouter>
     </RestaurantProvider>
   );
