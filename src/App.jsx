@@ -20,6 +20,7 @@ function Navigation() {
         <Link to="/reservations">Reservations & Events</Link>
         <Link to="/cart">Cart ({totalItems})</Link>
         <Link to="/profile">{currentUser ? currentUser.name : "Account"}</Link>
+        <Link to="/admin">Admin Dashboard</Link>
       </div>
     </nav>
   );
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/reservations" element={<ReservationsPage />} />
           <Route path="/cart" element={<CartCheckoutPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/admin" element={<AdminDashboard/>} />
         </Routes>
       <AiChatWidget />
       </BrowserRouter>
