@@ -1,3 +1,4 @@
+// AI Reference: Used Gemini to format the confirmation message template string inside handleSubmit.
 import { useContext, useState } from "react";
 import { RestaurantContext } from "../context/RestaurantContext";
 

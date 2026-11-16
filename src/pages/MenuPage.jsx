@@ -1,3 +1,4 @@
+// AI Reference: Used Gemini to combine the search input and dietary tag checks inside the filteredItems .filter() callback.
 import { useContext, useState } from "react";
 import { RestaurantContext } from "../context/RestaurantContext";
 import MenuCard from "../components/MenuCard";

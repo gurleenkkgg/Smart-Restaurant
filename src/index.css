@@ -1,3 +1,5 @@
+/* AI Reference: Used Gemini for the repeat(auto-fill, minmax(280px, 1fr)) grid rule in .menu-grid. */
+/* AI Reference: Used Gemini for the sticky navbar positioning (position: sticky; top: 0) and the transform: translateY(-5px) card hover transition. */
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

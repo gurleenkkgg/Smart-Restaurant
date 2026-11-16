@@ -1,3 +1,4 @@
+// AI Reference: Used Gemini to fix the .map().filter() chain inside updateQuantity when an item's quantity reaches zero.
 import { createContext, useState } from "react";
 import { initialMenu } from "../data/mockMenu";
 

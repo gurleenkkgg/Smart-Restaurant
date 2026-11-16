@@ -1,3 +1,4 @@
+// Data Reference: Core dish names and categories (Starters, Mains, Desserts, Beverages) are based on the SODV2201 Assignment 1 specification; additional sample items, descriptions, ingredients, and pricing were generated with Google Gemini.
 export const initialMenu = [
   {
     id: 1,

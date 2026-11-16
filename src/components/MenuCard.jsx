@@ -1,3 +1,4 @@
+// AI Reference: Used Gemini for the setTimeout callback that resets the justAdded button state after 900ms.
 export default function MenuCard({ item, onAdd }) {
   return (
     <div className="menu-card">

@@ -1,3 +1,4 @@
+// AI Reference: Used Gemini to debug the conditional address validation check when orderType is set to "Delivery".
 import { useContext, useState } from "react";
 import { RestaurantContext } from "../context/RestaurantContext";
 

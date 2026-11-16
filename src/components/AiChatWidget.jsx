@@ -1,3 +1,4 @@
+// AI Reference: Used Gemini for the .some() keyword matching check inside the getAiReply function.
 import { useState, useContext } from "react";
 import { aiDataset } from "../data/aiResponses";
 import { RestaurantContext } from "../context/RestaurantContext";

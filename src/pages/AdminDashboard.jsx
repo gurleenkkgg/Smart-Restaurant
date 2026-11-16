@@ -1,3 +1,4 @@
+// AI Reference: Used Gemini for the .split(",").map() logic that converts the dietary input string into an array.
 import { useContext, useState } from "react";
 import { RestaurantContext } from "../context/RestaurantContext";
 
