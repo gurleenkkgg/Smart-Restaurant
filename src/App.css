@@ -217,3 +217,112 @@ body {
   width: 100%;
   margin-top: 0.3rem;
 }
+.ai-widget-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.ai-toggle-btn {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ai-chat-box {
+  width: 330px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-header {
+  background: #ea580c;
+  color: white;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.ai-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ai-messages {
+  padding: 0.8rem;
+  height: 210px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat-bubble {
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  max-width: 85%;
+}
+
+.chat-bubble.ai {
+  background: #f1f5f9;
+  align-self: flex-start;
+}
+
+.chat-bubble.user {
+  background: #ea580c;
+  color: white;
+  align-self: flex-end;
+}
+
+.ai-quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.5rem 0.8rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.ai-quick-questions button {
+  font-size: 0.72rem;
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+  border-radius: 12px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.ai-input-row {
+  display: flex;
+  border-top: 1px solid #e2e8f0;
+}
+
+.ai-input-row input {
+  flex: 1;
+  border: none;
+  padding: 0.6rem;
+  outline: none;
+}
+
+.ai-input-row button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+}
